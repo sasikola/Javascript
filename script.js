@@ -1,5 +1,11 @@
 function Funcname() {
-    console.log("object")
+  console.log("object");
 }
 
-Funcname()
+Funcname();
+
+function SecondFeature() {
+  console.log("second feature");
+}
+
+SecondFeature();
