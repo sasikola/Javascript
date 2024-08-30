@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.5/axios.min.js"
+      integrity="sha512-01Pe9P3mJM/4c80VuoYEGHlspKGbd9uWQe9HtdLsdTqV0CS1kz8ca44sinVEXEvlZNciMmsAjeEbm5ZxHC7yYg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div>
+      <p>
+        <input type="text" placeholder="Enter email" id="username"/>
+      </p>
+      <p>
+        <input type="text" placeholder="Enter password" id="password"/>
+      </p>
+      <button onclick="send()">submit</button>
+    </div>
+    <script>
+        function send(){
+            var username=document.getElementById("username").value, password=document.getElementById("password").value
+            console.log(username,password)
+            var newUser={username,password}
+            axios.post("https://reqres.in/api/users",newUser)
+                .then((res)=>{
+                    console.log(res)
+                })
+        }
+    </script>
+  </body>
+</html>

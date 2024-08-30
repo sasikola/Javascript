@@ -4,9 +4,65 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.5/axios.min.js" integrity="sha512-01Pe9P3mJM/4c80VuoYEGHlspKGbd9uWQe9HtdLsdTqV0CS1kz8ca44sinVEXEvlZNciMmsAjeEbm5ZxHC7yYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
   <body>
-    <h1>Javascript added</h1>
+    <div id="employees">
+
+    </div>
+   <script>
+
+    fetch("https://reqres.in/api/users?page=2")
+        .then((res)=>{
+            //console.log(res)
+            return res.json()
+        })
+        .then((resJson)=>{
+            //console.log(resJson)
+            displayEmployees(resJson.data)
+        })
+    function displayEmployees(employees){
+        console.log("Employess are",employees)
+        employees.map((emp)=>{
+            document.getElementById("employees").innerHTML+= `
+                <div>
+                    <p>Name:${emp.first_name}</p>
+                    <p>Email:${emp.email}</p>
+                    <p><img src="${emp.avatar}"/></p>
+                </div>
+            `    
+            
+        })
+    }
+    // setTimeout(function(){
+    //     console.lo("amazon")
+    // },4000)
+    // console.log("flipkart")
+    // console.log("myntra")
+    
+   </script>
+
     <script src="./script.js"></script>
   </body>
 </html>
+
+<!-- 
+API  
+https://reqres.in response json ---  object 
+
+{
+    "key":value,
+    "key":value,
+}
+
+get       retrieve
+post      create
+put       update
+delete    delete 
+
+fetch("api") get 
+
+asynchronous actions 
+
+
+-->
