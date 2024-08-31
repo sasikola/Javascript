@@ -37,9 +37,27 @@
 
 // console.log(x)
 
-{
-  var x = 10;
-  console.log(x);
-}
+// {
+//   var x = 10;
+//   console.log(x);
+// }
 
-console.log(x);
+// console.log(x);
+
+// data types
+// primitive
+// non-primitive
+
+// string --> "10", '', ``
+// number --> 98.5
+// boolean --> true or false
+// null --> object
+// undefined  -->
+
+// let x;
+// console.log(x);
+
+// object
+// functions
+// arrays
+
