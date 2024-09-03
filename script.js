@@ -371,3 +371,103 @@
 //   { name: "Huawei P40", price: 400 },
 // ];
 // filterProducts(products);
+// strings --> it is a group of characters enclosed with in a double quotes or single quotes
+// it is a primitive data type
+// let x = "true";
+// let y = "john";
+// let z = `john`;
+// console.log(typeof x);
+// console.log(typeof y);
+// console.log(typeof z);
+// // string interpolation
+// let age = 30;
+// let name = "john";
+// console.log("My name is " + name + "and my age is " + age);
+
+// console.log(`My name is ${name} and my age is ${age}`);
+
+let x = "Hello world Hello";
+// length --> it will return the length of a string
+console.log(x.length);
+// charAt() --> it will return  the character at a specified index position in a string
+console.log(x.charAt(6));
+
+// slice(start, end)--> it will extract the part of a string and return the extracted part
+// start index --> 0 (H)
+// end index --> 4 (l)
+
+let part = x.slice(0, 5);
+console.log(part);
+// subStr()
+// subString()
+
+// searching methods in string
+// indexOf() --> it will return the index position of the first occurance
+
+console.log(x.indexOf("Hello"));
+
+// lastIndexOf() --> it will return the index from the last occurance
+
+// console.log(x.lastIndexOf("Hell"));
+
+// let text = "it will return the index from the last occurance";
+// let index = text.lastIndexOf("the");
+// console.log(index);
+
+// searh()--> search method return position of the match
+let text = "It will     Return the index from the last Occurance";
+console.log(text.search("will"));
+// toUpperCase() -->
+let upperCase = text.toUpperCase();
+console.log(upperCase);
+
+// toLowerCase()
+console.log(text.toLowerCase());
+
+let str1 = "Hello";
+let str2 = "World";
+console.log(str1 + str2);
+console.log(str2.concat(str1));
+
+// trim() --> trim method will removes the whitespaces from the string
+// it will remove the whitespaced from both the ends
+// let string = "   Hello,  Word!  ";
+// console.log(string);
+// let trimmedString = string.trim(" ");
+// console.log(trimmedString);
+// string.trimStart();
+// string.trimEnd()
+
+// replace()--> it will replace the specified value with  another value
+let string = "It will Return the index from the last Occurance";
+let newString = string.replace("Return", "Give");
+console.log(newString);
+let img1 = "image1.png";
+let img2 = "image2.png";
+console.log(img1.replace(".png", ".jpg"));
+
+// split() --> it is used to convert the string to array
+console.log(string.lastIndexOf("e"));  //e
+let greet = "hello";
+// h --> 1
+// e  ->1
+// l --> 2
+console.log(string.indexOf("h"))
+
+console.log(greet.substring(0, 2));
+
+// charCodeAt()
+// 0 - 65535
+console.log(string.charCodeAt(1));
+console.log(string.includes("return"));
+
+// padding method -->  padStart and padEnd
+// it will allow us to add a additional characters in a string
+
+let str = "123";
+let paddStart = str.padEnd(6, "abc");
+console.log(paddStart);
+
+// repeat(2);
+// it will repeat the string for the specified number of times
+console.log(str.repeat(10));
