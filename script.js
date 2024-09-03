@@ -110,8 +110,6 @@
 // conditional operators
 // it will allow you to control the flow of execution based on certain condtions.
 
-let num = 5;
-
 // console.log("This is odd number");
 
 // / --> it will return quotient
@@ -171,11 +169,11 @@ let num = 5;
 
 //  condition ? statement1 : statement2
 // if else
-if (true) {
-  console.log("Hello world");
-} else {
-  console.log("Goodbye world");
-}
+// if (true) {
+//   console.log("Hello world");
+// } else {
+//   console.log("Goodbye world");
+// }
 
 // let x = 3;
 // x % 2 === 0 ? console.log("Even") : console.log("Odd");
@@ -233,3 +231,143 @@ if (true) {
 // 3. if number is multiples of 5, print "Fizz"
 // 4. if number is multiples of 3, print "Buzz"
 // 5. if number is multipes of both 3 and 5, print "FizzBuzz"
+
+// logical operators
+// && , ||, !
+// to check the two conditions we have to use logical operators
+
+// &&
+// T && T --> T
+// T F --> F
+// F F --> F
+// F T --> F
+
+// ||
+// true and true --> true
+// true and false --> true
+// false and true --> true
+// false and false --> false
+
+// !
+// true --> false
+// fale --> true
+
+// let x = 2;
+
+// console.log(x === 2);
+// console.log(x !== 3);
+// if (x === 2 && x === 3) {
+//   console.log("Hello world");
+// }
+
+// let username = "user12";
+// let password = "password1234";
+
+// if (username === "user123" || password === "password123") {
+//   console.log("Login successful");
+// } else {
+//   console.log("Invalid credentials");
+// }
+
+// let age = 20;
+// let hasPermission = false;
+
+// if (age >= 18 && hasPermission) {
+//   console.log("Eligible for vote");
+// } else {
+//   console.log("Not eligible for vote");
+// }
+
+// let isWeekend = false;
+// let isHoliday = true;
+
+// if (isWeekend || isHoliday) {
+//   console.log("You can relax today");
+// } else {
+//   console.log("It's a working day");
+// }
+
+// let numbers = [3, 7, 1, 8, 2, 5];
+// // 1. iterate an array
+// // 2. we have to compare the numbers to each other
+// let maxNum = numbers[0];  //8
+// for (let i = 0; i < numbers.length; i++) {
+//   if (numbers[i] > maxNum) {  //2 > 8  --> false
+//     maxNum = numbers[i];
+//   }
+// }
+// console.log(`The maximum number is ${maxNum}`);
+
+// let numbers = [3, -1, 0, -2, 4, -3, -5, 0, 8];
+// positiveNumbes = 3
+// negativeNumbres = 4
+// zero = 2
+
+// 1. loop the array to extract the elements
+//
+
+// let positiveNum = 0;
+// let negativeNum = 0;
+// let zeroCount = 0;
+
+// for (let i = 0; i < numbers.length; i++) {
+//   if (numbers[i] > 0) {
+//     positiveNum++;
+//   } else if (numbers[i] < 0) {
+//     negativeNum++;
+//   }else{
+//     zeroCount++;
+//   }
+// }
+
+// console.log("Postive numbers = ", positiveNum);
+// console.log("Negative numbers = ", negativeNum);
+// console.log("Zero count = ", zeroCount);
+
+// we can call the js as a functional language
+// to re-use the block of code to perform particular task
+
+// function greet(a,b, c) {
+//   console.log("Hello world");
+// }
+
+// greet(1,2,3,4);
+
+// general function / normal function
+// arrow function
+// ananymous function
+// self-invoking function
+
+// function functionName(a, b, c) {
+//   return a + b + c;
+//   return a - b - c;
+// }
+
+// console.log(functionName(2, 3, 4));
+
+// let x = (a,v,b) => {
+//   console.log("Hello world");
+// };
+// x(4,4,5)
+
+// let x = function(){
+//   console.log("Hello world");
+// }
+// x()
+
+// function filterProducts(products) {
+//   for (let i = 0; i < products.length; i++) {
+//     if (products[i].price > 800) {
+//       console.log(products[i].name);
+//     }
+//   }
+// }
+// let products = [
+//   { name: "iPhone 12", price: 1000 },
+//   { name: "Samsung Galaxy S21", price: 800 },
+//   { name: "OnePlus 8T", price: 700 },
+//   { name: "Google Pixel 5", price: 600 },
+//   { name: "Xiaomi Mi 11", price: 500 },
+//   { name: "Huawei P40", price: 400 },
+// ];
+// filterProducts(products);
