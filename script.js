@@ -479,34 +479,34 @@
 // arrays
 // arrays are used to store the multiple values in a single variable
 // it is denoted using []
-let arr = [1, 2, 3, "hello", true];
-console.log(arr);
-console.log(arr[3]);
+// let arr = [1, 2, 3, "hello", true];
+// console.log(arr);
+// console.log(arr[3]);
 
 // push  --> push method add element to the array from the ending position and it will return new array
 // pop  --> removes the element from the last position, and it will return the new array
 // shift  --> removes the element from the starting position and return new array
 // unshift  --> add element from the starting position and return new array
-arr.push("World");
-console.log(arr);
+// arr.push("World");
+// console.log(arr);
 
-arr.pop();
-console.log(arr);
+// arr.pop();
+// console.log(arr);
 
-arr.shift();
-console.log(arr);
+// arr.shift();
+// console.log(arr);
 
-arr.unshift("Hello");
-console.log(arr);
+// arr.unshift("Hello");
+// console.log(arr);
 
 // concat() --> concat method merge two or more arrays
 
-let arr1 = [1, 2, 3];
-let arr2 = ["a", "b", "c"];
-let arr3 = ["orange", "banana"];
+// let arr1 = [1, 2, 3];
+// let arr2 = ["a", "b", "c"];
+// let arr3 = ["orange", "banana"];
 
-let mergedArr = arr1.concat(arr2, arr3);
-console.log(mergedArr);
+// let mergedArr = arr1.concat(arr2, arr3);
+// console.log(mergedArr);
 
 // slice() --> it will return the shallow copy of a portion of an array into new array. it does not modify the original array
 
@@ -536,10 +536,10 @@ console.log(mergedArr);
 
 // console.log(newValue);
 
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
 
-let found = numbers.find((i) => i % 2 === 0);
-console.log("find method", found);
+// let found = numbers.find((i) => i % 2 === 0);
+// console.log("find method", found);
 
 // map
 // filter
@@ -547,17 +547,17 @@ console.log("find method", found);
 // find
 // forEach
 
-let modifiedArray = numbers.map((i) => {
-  return i + 2;
-});
-console.log(modifiedArray);
+// let modifiedArray = numbers.map((i) => {
+//   return i + 2;
+// });
+// console.log(modifiedArray);
 
-let filteredArray = numbers.filter((i) => i % 2 == 0);
-console.log("filteredArray", filteredArray);
+// let filteredArray = numbers.filter((i) => i % 2 == 0);
+// console.log("filteredArray", filteredArray);
 
-let number = [1, 2, 3, 4];
-let sum = number.reduce((pre, curr) => pre * curr);
-console.log(sum);
+// let number = [1, 2, 3, 4];
+// let sum = number.reduce((pre, curr) => pre * curr);
+// console.log(sum);
 
 // flipkart
 // mobile (cart) 1000
@@ -565,40 +565,184 @@ console.log(sum);
 // earphones (cart) 100
 // total -> 1200
 
-let products = [
-  {
-    name: "Laptop",
-    price: 900,
-    inStock: true,
-  },
-  {
-    name: "Mobile",
-    price: 1000,
-    inStock: true,
-  },
-  {
-    name: "Charger",
-    price: 100,
-    inStock: true,
-  },
-  {
-    name: "Earphones",
-    price: 100,
-    inStock: false,
-  },
-];
+// let products = [
+//   {
+//     name: "Laptop",
+//     price: 900,
+//     inStock: true,
+//   },
+//   {
+//     name: "Mobile",
+//     price: 1000,
+//     inStock: true,
+//   },
+//   {
+//     name: "Charger",
+//     price: 100,
+//     inStock: true,
+//   },
+//   {
+//     name: "Earphones",
+//     price: 100,
+//     inStock: false,
+//   },
+// ];
 
-console.log(products);
-let inStockProducts = products.filter((i) => i.inStock === true);
-console.log(inStockProducts);
+// console.log(products);
+// let inStockProducts = products.filter((i) => i.inStock === true);
+// console.log(inStockProducts);
 
 // for (let i = 0; i < inStockProducts.length; i++) {
 //   console.log(inStockProducts[i].price);
 // }
 
-let singleProduct = inStockProducts.map((i) => i.price);
-console.log(singleProduct);
+// let singleProduct = inStockProducts.map((i) => i.price);
+// console.log(singleProduct);
 
-let totalPrice = singleProduct.reduce((pre, curr) => pre + curr);
+// let totalPrice = singleProduct.reduce((pre, curr) => pre + curr);
 
-console.log(totalPrice);
+// console.log(totalPrice);
+
+// const students = [
+//   { name: "Alice", score: 85 },
+//   { name: "Bob", score: 95 },
+//   { name: "Charlie", score: 67 },
+//   { name: "David", score: 74 },
+//   { name: "Eve", score: 88 },
+//   { name: "Frank", score: 50 },
+// ];
+
+// // filter the students  who got score above the 70 marks
+
+// // let highScores = students.filter((student) => student.score > 70);
+// // console.log(highScores);
+
+// let topScoreStudent = students
+//   .filter((i) => i.score > 70)
+//   .reduce((preValue, currValue) => {
+//     console.log(currValue.score);
+//     return currValue.score > preValue.score ? currValue : preValue;
+//   }).name;
+
+// console.log("topScoreStudent", topScoreStudent);
+
+// const students = [
+//   { name: "Alice", score: 85, },
+//   { name: "Bob", score: 95 },
+//   { name: "Charlie", score: 67 },
+//   { name: "David", score: 74 },
+//   { name: "Eve", score: 88 },
+//   { name: "Frank", score: 50 },
+// ];
+
+// let filteredStudents1 = students.forEach((student, index) => {
+//   return student.score > 90 ? student.name : "";
+// });
+
+// console.log(filteredStudents1);
+
+// let filteredStudents2 = students.map((student, index) => {
+//   return student.score > 70 ? student.name : "";
+// });
+// console.log(filteredStudents2);
+
+// forEach()-->it is used to iterate the array of elements and execute provided function once for each element.
+// forEach it will print undefined
+
+// map()--> map is used o create a new array by applying a provided function
+// it will return a new array
+// the length of the returned array is same as the original array
+
+// let fruits = ["orange", "banana", "apple"];
+// sort()-> sort method will sort the array and return new array
+// by default the sorting order is ascending
+// fruits.sort((a, b) => a - b);
+
+// console.log(fruits);
+
+// let numbers = [1, 2, [3, 4], 5, 6, [7, 8]];
+// // [1,2,3,4,5,6,7,8]  flatten the array
+// // flat()--> it will return a new array with all sub-array elements concatenated into the single array
+
+// console.log(numbers.flat());
+
+// objects
+// car --> color, cost, speed,
+// {}
+// key : value
+// let car = {};
+
+// car.color = "Red"
+// car.name = "Benz"
+// car.price = 1099084
+// console.log(car.color)
+
+// using new keyword
+
+// const car = new Object();
+
+// car.color = "Red";
+// car.name = "Benz";
+// car.price = 1099084;
+// console.log(car);
+
+// function MyObject(color, price, name) {
+//   this.name = name;
+//   this.price = price;
+//   this.color = color;
+// }
+
+// let car = new MyObject("Red", 1099084, "Benz");
+// console.log(car)
+
+// let person = {
+//   username: "John",
+//   age: 30,
+// };
+
+// Object.freeze(person);
+// person.username = "Tony";
+// console.log(person.name);
+
+// shallow copy -->a shallow copy of an object is a copy where the first level of the object is duplicated
+// person.username = "Tony"
+
+// method 1
+// let shallowCopy = Object.assign({}, person);
+
+// shallowCopy.username = "tony"
+// console.log("shallowCopy", shallowCopy)
+
+// method2
+
+// let shallowCopy2 = { ...person };
+
+// shallowCopy2.username = "tony";
+// console.log("shallowCopy2", shallowCopy2);
+
+// deep copy --> deep copy duplicates everything, including nested objects. this means that the copied object is completely independent of the original
+
+let person = {
+  username: "John",
+  age: 30,
+  address: {
+    street: "123 Main St",
+    city: "New York",
+    state: "NY",
+    zip: 10001,
+  },
+};
+
+// let shallowCopy2 = { ...person };
+// shallowCopy2.address.city = "America";
+// console.log("shallowCopy2", shallowCopy2);
+// console.log("Original object", person);
+
+let deepCopy = JSON.parse(JSON.stringify(person));
+deepCopy.address.city = "America";
+console.log("deepCopy", deepCopy)
+console.log("Original object", person)
+
+// 1. how many ways we can create an object
+// 2. shallow copy and deep copy
+// 3. freeze()
