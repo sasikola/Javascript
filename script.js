@@ -386,25 +386,25 @@
 
 // console.log(`My name is ${name} and my age is ${age}`);
 
-let x = "Hello world Hello";
-// length --> it will return the length of a string
-console.log(x.length);
-// charAt() --> it will return  the character at a specified index position in a string
-console.log(x.charAt(6));
+// let x = "Hello world Hello";
+// // length --> it will return the length of a string
+// console.log(x.length);
+// // charAt() --> it will return  the character at a specified index position in a string
+// console.log(x.charAt(6));
 
 // slice(start, end)--> it will extract the part of a string and return the extracted part
 // start index --> 0 (H)
 // end index --> 4 (l)
 
-let part = x.slice(0, 5);
-console.log(part);
+// let part = x.slice(0, 5);
+// console.log(part);
 // subStr()
 // subString()
 
 // searching methods in string
 // indexOf() --> it will return the index position of the first occurance
 
-console.log(x.indexOf("Hello"));
+// console.log(x.indexOf("Hello"));
 
 // lastIndexOf() --> it will return the index from the last occurance
 
@@ -415,19 +415,19 @@ console.log(x.indexOf("Hello"));
 // console.log(index);
 
 // searh()--> search method return position of the match
-let text = "It will     Return the index from the last Occurance";
-console.log(text.search("will"));
-// toUpperCase() -->
-let upperCase = text.toUpperCase();
-console.log(upperCase);
+// let text = "It will     Return the index from the last Occurance";
+// console.log(text.search("will"));
+// // toUpperCase() -->
+// let upperCase = text.toUpperCase();
+// console.log(upperCase);
 
 // toLowerCase()
-console.log(text.toLowerCase());
+// console.log(text.toLowerCase());
 
-let str1 = "Hello";
-let str2 = "World";
-console.log(str1 + str2);
-console.log(str2.concat(str1));
+// let str1 = "Hello";
+// let str2 = "World";
+// console.log(str1 + str2);
+// console.log(str2.concat(str1));
 
 // trim() --> trim method will removes the whitespaces from the string
 // it will remove the whitespaced from both the ends
@@ -439,35 +439,166 @@ console.log(str2.concat(str1));
 // string.trimEnd()
 
 // replace()--> it will replace the specified value with  another value
-let string = "It will Return the index from the last Occurance";
-let newString = string.replace("Return", "Give");
-console.log(newString);
-let img1 = "image1.png";
-let img2 = "image2.png";
-console.log(img1.replace(".png", ".jpg"));
+// let string = "It will Return the index from the last Occurance";
+// let newString = string.replace("Return", "Give");
+// console.log(newString);
+// let img1 = "image1.png";
+// let img2 = "image2.png";
+// console.log(img1.replace(".png", ".jpg"));
 
 // split() --> it is used to convert the string to array
-console.log(string.lastIndexOf("e"));  //e
-let greet = "hello";
+// console.log(string.lastIndexOf("e"));  //e
+// let greet = "hello";
 // h --> 1
 // e  ->1
 // l --> 2
-console.log(string.indexOf("h"))
+// console.log(string.indexOf("h"))
 
-console.log(greet.substring(0, 2));
+// console.log(greet.substring(0, 2));
 
 // charCodeAt()
 // 0 - 65535
-console.log(string.charCodeAt(1));
-console.log(string.includes("return"));
+// console.log(string.charCodeAt(1));
+// console.log(string.includes("return"));
 
 // padding method -->  padStart and padEnd
 // it will allow us to add a additional characters in a string
 
-let str = "123";
-let paddStart = str.padEnd(6, "abc");
-console.log(paddStart);
+// let str = "123";
+// let paddStart = str.padEnd(6, "abc");
+// console.log(paddStart);
 
 // repeat(2);
 // it will repeat the string for the specified number of times
-console.log(str.repeat(10));
+// console.log(str.repeat(10));
+
+// anagram
+// listen
+// silent
+
+// arrays
+// arrays are used to store the multiple values in a single variable
+// it is denoted using []
+let arr = [1, 2, 3, "hello", true];
+console.log(arr);
+console.log(arr[3]);
+
+// push  --> push method add element to the array from the ending position and it will return new array
+// pop  --> removes the element from the last position, and it will return the new array
+// shift  --> removes the element from the starting position and return new array
+// unshift  --> add element from the starting position and return new array
+arr.push("World");
+console.log(arr);
+
+arr.pop();
+console.log(arr);
+
+arr.shift();
+console.log(arr);
+
+arr.unshift("Hello");
+console.log(arr);
+
+// concat() --> concat method merge two or more arrays
+
+let arr1 = [1, 2, 3];
+let arr2 = ["a", "b", "c"];
+let arr3 = ["orange", "banana"];
+
+let mergedArr = arr1.concat(arr2, arr3);
+console.log(mergedArr);
+
+// slice() --> it will return the shallow copy of a portion of an array into new array. it does not modify the original array
+
+// let fruits = ["orange", "banana", "apple", "banana"];
+// console.log(fruits);
+// let slicedArray = fruits.slice(0, 3);
+
+// console.log(slicedArray);
+
+// // splice() -->
+// let splicedArray = fruits.splice(0, 1, "hello world", "Grapes")
+// console.log(splicedArray)
+// console.log(fruits)
+
+// indexOf()--> it will returns the index position
+
+// console.log(fruits.indexOf("banana"));
+// console.log(fruits.lastIndexOf("banana"));
+
+// find() --> find method will return the value of first element in the array that satifies the providing logic/ testing function, otherwise it will return undefined
+
+// let fruits = ["orange", "banana", "apple", "banana"];
+
+// let newValue = fruits.find((i) => {
+//   return i === "bana";
+// });
+
+// console.log(newValue);
+
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+
+let found = numbers.find((i) => i % 2 === 0);
+console.log("find method", found);
+
+// map
+// filter
+// reduce
+// find
+// forEach
+
+let modifiedArray = numbers.map((i) => {
+  return i + 2;
+});
+console.log(modifiedArray);
+
+let filteredArray = numbers.filter((i) => i % 2 == 0);
+console.log("filteredArray", filteredArray);
+
+let number = [1, 2, 3, 4];
+let sum = number.reduce((pre, curr) => pre * curr);
+console.log(sum);
+
+// flipkart
+// mobile (cart) 1000
+// charger (cart) 100
+// earphones (cart) 100
+// total -> 1200
+
+let products = [
+  {
+    name: "Laptop",
+    price: 900,
+    inStock: true,
+  },
+  {
+    name: "Mobile",
+    price: 1000,
+    inStock: true,
+  },
+  {
+    name: "Charger",
+    price: 100,
+    inStock: true,
+  },
+  {
+    name: "Earphones",
+    price: 100,
+    inStock: false,
+  },
+];
+
+console.log(products);
+let inStockProducts = products.filter((i) => i.inStock === true);
+console.log(inStockProducts);
+
+// for (let i = 0; i < inStockProducts.length; i++) {
+//   console.log(inStockProducts[i].price);
+// }
+
+let singleProduct = inStockProducts.map((i) => i.price);
+console.log(singleProduct);
+
+let totalPrice = singleProduct.reduce((pre, curr) => pre + curr);
+
+console.log(totalPrice);
