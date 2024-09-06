@@ -722,27 +722,53 @@
 
 // deep copy --> deep copy duplicates everything, including nested objects. this means that the copied object is completely independent of the original
 
-let person = {
-  username: "John",
-  age: 30,
-  address: {
-    street: "123 Main St",
-    city: "New York",
-    state: "NY",
-    zip: 10001,
-  },
-};
+// let person = {
+//   username: "John",
+//   age: 30,
+//   address: {
+//     street: "123 Main St",
+//     city: "New York",
+//     state: "NY",
+//     zip: 10001,
+//   },
+// };
 
 // let shallowCopy2 = { ...person };
 // shallowCopy2.address.city = "America";
 // console.log("shallowCopy2", shallowCopy2);
 // console.log("Original object", person);
 
-let deepCopy = JSON.parse(JSON.stringify(person));
-deepCopy.address.city = "America";
-console.log("deepCopy", deepCopy)
-console.log("Original object", person)
+// let deepCopy = JSON.parse(JSON.stringify(person));
+// deepCopy.address.city = "America";
+// console.log("deepCopy", deepCopy)
+// console.log("Original object", person)
 
 // 1. how many ways we can create an object
 // 2. shallow copy and deep copy
 // 3. freeze()
+
+// callback function --> a callback is a function that is passed as an argument to another function
+
+// callback function is used to perform a specific task after another function has completed its execution
+
+// map, filter, reduce, find,
+// software  --> front-end + backend(server)
+// front-end --> html, css, javascript
+
+// we use javascript to make the webpages interactive and dynamic
+// API
+// API integration
+// API --> application programming interface
+
+fetch("https://jsonplaceholder.typicode.com/todos")
+  .then((response) => {
+    return response.json();
+  })
+  .then((i) => {
+    console.log(i);
+  });
+// pending
+// reject
+// fulfill
+// axios
+// get and post
