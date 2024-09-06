@@ -759,16 +759,74 @@
 // API
 // API integration
 // API --> application programming interface
+// CRUD --> create (POST), read/retrive (GET), update(PUT/PATCH), delete(DELETE)
+// fetch("https://jsonplaceholder.typicode.com/todos")
+//   .then((response) => {
+//     return response.json();
+//   })
+//   .then((i) => {
+//     console.log(i);
+//   });
 
-fetch("https://jsonplaceholder.typicode.com/todos")
-  .then((response) => {
-    return response.json();
-  })
-  .then((i) => {
-    console.log(i);
-  });
 // pending
 // reject
 // fulfill
 // axios
 // get and post
+// pending --> reject
+// pending --> resolve or fulfill
+
+// axios.get("https://jsonplaceholder.typicode.com/todos").then((res) => {
+//   console.log("success", res.data);
+// });
+
+// DOM --> document object model
+// using id --> it will access first occurance
+// using className []
+// using tagName []
+// using querySelector --> it will access first occurance
+// using querySelectorAll []
+
+// let title = document.getElementById("heading");
+
+// title.style.backgroundColor = "red";
+// title.style.color = "white";
+// title.style.margin = "20px";
+// title.style.padding = "20px";
+
+// let title = document.getElementsByClassName("heading");
+
+// for (let i = 0; i < title.length; i++) {
+//   console.log(title[i]);
+//   title[i].style.backgroundColor = "red";
+//   title[i].style.color = "green";
+// }
+
+// let title = document.getElementsByTagName("h1")
+
+// for (let i = 0; i < title.length; i++) {
+//   title[i].style.backgroundColor = "green";
+// }
+
+// querySelector
+// using class
+// using id
+
+// let title = document.querySelector("#heading");
+// console.log(title);
+
+// title.style.backgroundColor = "red"
+
+// querySelectorAll
+// using class
+// using id
+
+// let title = document.querySelectorAll("#heading");
+
+let buttons = document.getElementsByClassName("btn");
+
+for (let i = 0; i < buttons.length; i++) {
+  buttons[i].addEventListener("click", () => {
+    console.log("Button clicked", buttons[i].innerText);
+  });
+}
