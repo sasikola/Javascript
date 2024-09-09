@@ -823,10 +823,75 @@
 
 // let title = document.querySelectorAll("#heading");
 
-let buttons = document.getElementsByClassName("btn");
+// console.log(typeof typeof 1)
+// let string = "hello"
+// console.log(string[0])
+// string[0] = "H"
+// console.log(string)
 
-for (let i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener("click", () => {
-    console.log("Button clicked", buttons[i].innerText);
+// let array = [1,2,3,4]
+// array[0] = 10
+// console.log(array)
+// array[2] = 30
+// console.log(array)
+
+// 5
+// using id --> it will access the first occurance
+// using class  --> it will store the elements in an array
+// querySelector  --> it will access the first occurance (# for id, . for class)
+// querySelectorAll --> it will store the elements in an array (# for id, . for class)
+// using tagName  --> it will store the elements in an array h1, p
+
+// let button = document.getElementById("btn");
+// button.addEventListener("click", toggleTheme);
+// let isLightTheme = true;
+
+// function toggleTheme() {
+//   if (isLightTheme) {
+//     document.body.style.backgroundColor = "white";
+//     document.body.style.color = "black";
+//     button.innerHTML = "White mode"
+//   }else{
+//     document.body.style.backgroundColor = "black";
+//     document.body.style.color = "white";
+//     button.innerHTML = "Dark mode"
+//   }
+
+//   isLightTheme = !isLightTheme
+// }
+
+let output = document.getElementById("output");
+
+function displayData(data) {
+  data.map((i) => {
+    output.innerHTML += `
+    <div class ="container">
+      <p>${i.first_name} ${i.last_name}</p>
+      <p>${i.email}</p>
+      <img src = "${i.avatar}" >
+    </div>
+    `;
   });
 }
+
+// fetch()
+//jsonplaceholder.typicode.com/todos
+https: fetch("https://reqres.in/api/users")
+  .then((response) => {
+    return response.json(); //parse
+  })
+  .then((i) => {
+    displayData(i.data);
+  })
+  .catch((err) => {
+    console.log(err);
+  });
+
+// axios
+//   .get("https://jsonplaceholder.typicode.com/todos")
+//   .then((response) => {
+//     console.log(response.data);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
