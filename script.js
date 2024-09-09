@@ -860,32 +860,32 @@
 //   isLightTheme = !isLightTheme
 // }
 
-let output = document.getElementById("output");
+// let output = document.getElementById("output");
 
-function displayData(data) {
-  data.map((i) => {
-    output.innerHTML += `
-    <div class ="container">
-      <p>${i.first_name} ${i.last_name}</p>
-      <p>${i.email}</p>
-      <img src = "${i.avatar}" >
-    </div>
-    `;
-  });
-}
+// function displayData(data) {
+//   data.map((i) => {
+//     output.innerHTML += `
+//     <div class ="container">
+//       <p>${i.first_name} ${i.last_name}</p>
+//       <p>${i.email}</p>
+//       <img src = "${i.avatar}" >
+//     </div>
+//     `;
+//   });
+// }
 
 // fetch()
 //jsonplaceholder.typicode.com/todos
-https: fetch("https://reqres.in/api/users")
-  .then((response) => {
-    return response.json(); //parse
-  })
-  .then((i) => {
-    displayData(i.data);
-  })
-  .catch((err) => {
-    console.log(err);
-  });
+// https: fetch("https://reqres.in/api/users")
+//   .then((response) => {
+//     return response.json(); //parse
+//   })
+//   .then((i) => {
+//     displayData(i.data);
+//   })
+//   .catch((err) => {
+//     console.log(err);
+//   });
 
 // axios
 //   .get("https://jsonplaceholder.typicode.com/todos")
@@ -895,3 +895,23 @@ https: fetch("https://reqres.in/api/users")
 //   .catch((err) => {
 //     console.log(err);
 //   });
+
+// https://reqres.in/api/users
+
+let button = document.getElementById("btn");
+
+button.addEventListener("click", sendData);
+
+function sendData() {
+  let username = document.getElementById("username").value;
+  let password = document.getElementById("password").value;
+  axios
+    .post("https://reqres.in/api/users", {
+      username,
+      password,
+    })
+    .then((response) => {
+      console.log(response);
+      alert("Data sent successfully!")
+    });
+}
